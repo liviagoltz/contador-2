@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <style>
+        body{
+            background-color: rgb(170, 170, 255);
+            justify-content: center;
+            display: flex;
+            align-items: center; 
+            min-height: 100vh;
+        }
+        section{
+            font-size: 35px;
+           
+        }
+        button{
+             font-size: 25px;
+             background-color: rgb(97, 97, 226);
+             align-items: center;
+        }
+        button:hover{
+            background-color: rgb(18, 18, 201);
+        }
+        p{
+            font-size:80px;
+            justify-content: center;
+            display: flex;
+            align-items: center; 
+            font-family: cursive;
+        }
+        h1{
+            justify-content: center;
+            display: flex;
+            align-items: center; 
+            font-family: cursive;
+            font-size: 90px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Contador</h1>
+        <p>0</p>
+        <button onclick="aumentar()">Mais</button>
+        <button onclick="zerar()">Zerar</button>
+        <button onclick="diminuir()">Menos</button>
+        <button onclick="dobrar()">Dobrar</button>
+        <button onclick="mais()">150+</button>
+        <button onclick="dim()">150-</button>
+    </section>
+    <script>
+        let numero = 0 
+
+          function aumentar(){
+            numero = numero +1
+            render()
+        }
+        function diminuir(){
+            numero = numero -1
+            render()
+        }
+        function zerar(){
+            numero = numero - numero
+            render()
+        }
+        function dobrar(){
+            numero = numero + numero
+            render()
+        }
+        function mais(){
+            numero = numero +150
+            render()
+        }
+        function dim(){
+            numero = numero -150
+            render()
+        }
+        function render(){
+           const p = document.querySelector("p")
+          p.innerText = numero
+        }
+        render()
+    </script>
+</body>
+</html>
